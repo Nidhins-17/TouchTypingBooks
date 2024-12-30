@@ -1,0 +1,17 @@
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+<div class="row">
+    <button mat-flat-button (click)="getContent()">
+        Get content
+    </button>
+    <button mat-flat-button>Basic</button>
+    
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile colspan="3" rowspan="1" [style.background]="'lightgreen'">
+            {{ typingContent }}
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="typingSpaceTitle" class="form-control" />
+    </div>
+</div>

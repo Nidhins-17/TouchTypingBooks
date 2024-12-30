@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -56,9 +57,15 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "dev-watch": {
+              "outputPath": {
+                "base": "./docs",
+                "browser": "."
+              }
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "dev-watch"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
