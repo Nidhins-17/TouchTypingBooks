@@ -1,5 +1,5 @@
 URL=https://Nidhins-17.github.io/TouchTypingBooks/
-BRANCH=feature/mainpage
+BRANCH=master
 
 ng build --base-href $URL --deploy-url $URL
 git add .
