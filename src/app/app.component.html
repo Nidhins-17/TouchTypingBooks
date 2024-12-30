@@ -3,6 +3,9 @@
 </div>
 <div class="row">
     <div class="col-3">
+        <mat-slide-toggle (click)="toggleStats()" [(ngModel)]="statsVisible" >Statistics</mat-slide-toggle>
+    </div>
+    <div class="col-3">
         <button class="btn btn-primary" (click)="toggleStats()">
             {{ statsVisible? "Hide" : "Show" }} Statistics
         </button>

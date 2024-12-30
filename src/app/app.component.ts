@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TypingSpaceComponent } from './components/typing-space/typing-space.component';
-import { StatsComponent } from './components/stats/stats.component';
 import { CommonModule } from '@angular/common';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatButtonModule} from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { StatsComponent } from './components/stats/stats.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TypingSpaceComponent, StatsComponent, CommonModule, MatGridListModule, MatButtonModule, MatSlideToggleModule],
+  imports: [RouterOutlet, TypingSpaceComponent, CommonModule, MatSlideToggleModule, StatsComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
   title = 'Touch Typing';
